@@ -177,6 +177,103 @@
       border-radius: 10px;
     }
 
+    /* Overlay Background */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      /* Transparent background */
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    /* Popup Form Box */
+    .popup-form {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+      animation: slideIn 0.4s ease-in-out;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .price-button {
+      cursor: pointer;
+      color: blue;
+      margin-top: 10px;
+    }
+
+    /* Slide-in animation */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .popup-form h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .popup-form input,
+    .popup-form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .popup-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .popup-form button:hover {
+      background-color: #218838;
+    }
+
+    /* Close Button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Thank You Message */
+    .thank-you-msg {
+      display: none;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+      margin-top: 10px;
+    }
+
+
     footer {
       background: #000;
       color: #fff;
@@ -207,7 +304,7 @@
     .footer-map h3 {
       margin-bottom: 0.5rem;
     }
-     
+
     .social-icons a {
       margin-right: 10px;
       display: inline-block;
@@ -287,41 +384,50 @@
           <img src="LedDisplay1.jpg" alt="LED Display Board 1">
           <p>High-quality LED display boards for indoor & outdoor advertising, customizable sizes and brightness levels.
           </p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="LedDisplay2.jpg" alt="LED Display Board 2">
           <p>Durable and weatherproof boards ideal for shops, offices, and events with dynamic visual content.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="relax neon.jpg" alt="LED Display Board 2">
           <p>Durable and weatherproof boards ideal for shops, offices, and events with dynamic visual content.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="LedDisplay4.jpg" alt="LED Display Board 2">
           <p>Durable and weatherproof boards ideal for shops, offices, and events with dynamic visual content.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="LedDisplay5.jpg" alt="LED Display Board 2">
           <p>Durable and weatherproof boards ideal for shops, offices, and events with dynamic visual content.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="LedDisplay6.jpg" alt="LED Display Board 2">
           <p>Durable and weatherproof boards ideal for shops, offices, and events with dynamic visual content.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="LedDisplay7.jpg" alt="LED Display Board 2">
           <p>Neon signs are illuminated signs made with glowing gas-filled glass tubes, creating vibrant, eye-catching
             displays, often used for advertising.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="LedDisplay8.jpg" alt="LED Display Board 2">
           <p>Neon signs are illuminated signs made with glowing gas-filled glass tubes, creating vibrant, eye-catching
             displays, often used for advertising.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="LedDisplay9.jpg" alt="LED Display Board 2">
           <p>Neon signs are illuminated signs made with glowing gas-filled glass tubes, creating vibrant, eye-catching
             displays, often used for advertising. </p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
       </div>
     </section>
@@ -333,38 +439,47 @@
         <div class="service-box">
           <img src="acp1.webp" alt="3D Letter 1">
           <p>Stylish 3D letters crafted with precision, perfect for branding, offices, and decorative signage.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="acp2.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="acp3.webp" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+          <p class="price-button" onclick="showFormPopup()">Check Price</p>
         </div>
         <div class="service-box">
           <img src="acp4.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="acp5.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="acp6.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="acp7.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="acp8.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="acp9.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
       </div>
     </section>
@@ -377,38 +492,47 @@
           <img src="sign board.jpg" alt="Sign Board 1">
           <p>Creative and professional sign boards for shops, schools, hospitals, and institutions with long-lasting
             prints.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="sign board2.jpg" alt="Sign Board 2">
           <p>Custom design boards in different shapes, colors, and lighting options to attract attention.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="sign board3.jpg" alt="Sign Board 2">
           <p>Custom design boards in different shapes, colors, and lighting options to attract attention.</p>
+          <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="sign board4.jpg" alt="Sign Board 2">
           <p>Custom design boards in different shapes, colors, and lighting options to attract attention.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="sign board5.jpg" alt="Sign Board 2">
           <p>Custom design boards in different shapes, colors, and lighting options to attract attention.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="sign board6.jpg" alt="Sign Board 2">
           <p>Custom design boards in different shapes, colors, and lighting options to attract attention.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="sign board7.jpg" alt="Sign Board 2">
           <p>Custom design boards in different shapes, colors, and lighting options to attract attention.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="sign board8.jpg" alt="Sign Board 2">
           <p>Custom design boards in different shapes, colors, and lighting options to attract attention.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="sign board9.jpg" alt="Sign Board 2">
           <p>Custom design boards in different shapes, colors, and lighting options to attract attention.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
       </div>
     </section>
@@ -421,74 +545,92 @@
           <img src="3d sign board.jpg" alt="3D Sign Board 1">
           <p>High-impact 3D sign boards for bold brand representation, featuring illuminated and non-illuminated
             options.</p>
+              <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d sign board2.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d sign board3.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d sign board4.webp" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d sign board5.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d sign board6.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d sign board7.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d sign board8.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d sign board9.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d letter.jpg" alt="3D Letter 1">
           <p>Stylish 3D letters crafted with precision, perfect for branding, offices, and decorative signage.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d letter 2.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d letter3.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d letter4.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d leter5.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d letter6.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d letter 7.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d letter 8.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="3d letter 9.jpg" alt="3D Letter 2">
           <p>Available in various materials like acrylic, metal, or PVC with lighting options for added visibility.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
       </div>
     </section>
@@ -498,43 +640,67 @@
         <div class="service-box">
           <img src="led.jpg" alt="3D Sign Board 1">
           <p>LED displays are widely used in digital signage, scoreboards, advertising billboards, and more.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="led2.jpg" alt="3D Sign Board 2">
           <p>LED displays are widely used in digital signage, scoreboards, advertising billboards, and more.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="led3.webp" alt="3D Sign Board 2">
           <p>LED displays are widely used in digital signage, scoreboards, advertising billboards, and more.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="led4.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="led5.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="led6.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="led7.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="led8.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
         <div class="service-box">
           <img src="led9.jpg" alt="3D Sign Board 2">
           <p>Eye-catching, premium boards tailored to your brand with glossy, matte, or textured finishes.</p>
+            <p class="price-button" onclick="showFormPopup()">Get Price</p>
         </div>
       </div>
     </section>
 
   </main>
+
+  <!-- Popup Form Wrapper -->
+  <div id="popup-overlay" class="popup-overlay">
+    <div class="popup-form">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <form id="priceForm" onsubmit="submitForm(event)">
+        <h2>Book a Service</h2>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Contact Number" required>
+        <textarea name="address" placeholder="Additional Details (Optional)"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="thankYouMsg" class="thank-you-msg"></p>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-container">
@@ -570,9 +736,28 @@
         </iframe>
       </div>
     </div>
-
     <p style="margin-top: 1rem; color: #66c37a;">&copy; 2025 A Concept Care. All rights reserved.</p>
+
   </footer>
+  <script>
+    function showFormPopup() {
+      document.getElementById('popup-overlay').style.display = 'flex';
+      document.getElementById('priceForm').style.display = 'block';
+      document.getElementById('thankYouMsg').style.display = 'none';
+      document.getElementById('priceForm').reset();
+    }
+
+    function closePopup() {
+      document.getElementById('popup-overlay').style.display = 'none';
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      document.getElementById('priceForm').style.display = 'none';
+      document.getElementById('thankYouMsg').innerText = "Thank you for submitting the form. We will contact you very soon.";
+      document.getElementById('thankYouMsg').style.display = 'block';
+    }
+  </script>
 
 
 </body>
